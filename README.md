@@ -35,7 +35,7 @@ There are two videos to support:
 # Open lib/database_connection.py and change the database name to YOUR_PROJECT_NAME
 (databases-starter-venv); open lib/database_connection.py
 
-# Run the tests
+# Run the tests (with extra logging) - see below if you have any issues
 (databases-starter-venv); pytest
 
 # Run the app
@@ -43,7 +43,13 @@ There are two videos to support:
 ```
 
 
+<br>
+<details>
+  <summary>I get a <code>ModuleNotFoundError: No module named 'psycopg'</code></summary>
+  <br>
+If, after activating your <code>venv</code> and installing dependencies, you see this error when running <code>pytest</code>, please deactivate and reactivate your <code>venv</code>. This should solve the problem - if not, contact your coach.
 </details>
+<br>
 
 
 <!-- BEGIN GENERATED SECTION DO NOT EDIT -->

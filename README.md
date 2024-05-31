@@ -35,7 +35,7 @@ There are two videos to support:
 # Open lib/database_connection.py and change the database name to YOUR_PROJECT_NAME
 (databases-starter-venv); open lib/database_connection.py
 
-# Run the tests (with extra logging) - see below if you have any issues
+# Run the tests - see below if you have any issues
 (databases-starter-venv); pytest
 
 # Run the app

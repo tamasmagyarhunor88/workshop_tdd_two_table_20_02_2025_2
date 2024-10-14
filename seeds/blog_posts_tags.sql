@@ -29,7 +29,7 @@ CREATE TABLE "public"."tags" (
 
 INSERT INTO "public"."posts" ("title") VALUES
 ('How to use Git'),
-('Fun classes'),
+('Python classes'),
 ('Using a REPL'),
 ('My weekend in Edinburgh'),
 ('The best chocolate cake EVER'),

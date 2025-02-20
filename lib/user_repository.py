@@ -19,3 +19,12 @@ class UserRepository():
         users_rows = self._db_connection.execute("SELECT * FROM users WHERE id = %s", [user_id])
         user = User(users_rows[0]['id'], users_rows[0]['name'], users_rows[0]['email'])
         return user
+    
+    def create(self, user):
+        self._db_connection.execute(
+            "INSERT INTO users (name, email) VALUES(%s, %s)",
+            [user.name, user.email]
+        )
+    
+    def delete(self, user_id):
+        self._db_connection.execute("DELETE FROM users WHERE id = %s", [user_id])

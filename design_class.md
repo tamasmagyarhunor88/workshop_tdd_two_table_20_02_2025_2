@@ -16,7 +16,7 @@ uses asciiflow.com but you could also use excalidraw.com, draw.io, or miro.com_
 │                            │
 │ - id, name, email          │
 │ - posts                    │
-│ - set_posts()              │
+│ - posts()                  │
 │                            │
 └───────────┬────────────────┘
             │
@@ -27,7 +27,7 @@ uses asciiflow.com but you could also use excalidraw.com, draw.io, or miro.com_
 │                         │
 │ - id, content, user_id  │
 │ - user                  │
-│ - set_user()            │
+│ - user()                │
 │                         │
 └─────────────────────────┘
 ```

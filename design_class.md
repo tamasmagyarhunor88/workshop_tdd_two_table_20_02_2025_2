@@ -80,7 +80,7 @@ We see those posts returned when we call posts()
 """
 user_repository = UserRepository()
 user = user_repository.find(1)
-user_posts = user_repository.posts()
+user_posts = user_repository.posts(user.id)
 
 
 user_posts # => [Post(Id: 1, Content: Its a beautiful life, User_id: 1)]

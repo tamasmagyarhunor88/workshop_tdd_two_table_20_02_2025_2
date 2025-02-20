@@ -1,4 +1,5 @@
 from lib.user import User
+from lib.post import Post
 
 class UserRepository():
     def __init__(self, db_connection):
@@ -28,3 +29,20 @@ class UserRepository():
     
     def delete(self, user_id):
         self._db_connection.execute("DELETE FROM users WHERE id = %s", [user_id])
+    
+    def posts(self, user_id):
+        posts = []
+
+        rows = self._db_connection.execute("SELECT * FROM posts WHERE user_id = %s", [user_id])
+        for post_dict in rows:
+            post = Post(post_dict['id'], post_dict['content'], post_dict['user_id'])
+            posts.append(post)
+
+        return posts
+
+    def get_user_with_posts(self, user_id):
+        user = self.find(user_id)
+
+        user.posts = self.posts(user_id)
+
+        return user

@@ -3,6 +3,7 @@ class User():
         self.id = id
         self.name = name
         self.email = email
+        self.posts = None
 
     def __repr__(self):
         return f"User(Id: {self.id}, Name: {self.name}, Email: {self.email})"

@@ -5,7 +5,11 @@ CREATE SEQUENCE IF NOT EXISTS posts_id_seq;
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY,
     content VARCHAR(255),
-    user_id INT
+    user_id int
+    -- user_id int,
+    -- constraint fk_user foreign key(user_id)
+    --   references users(id)
+    --   on delete cascade
 );
 
 INSERT INTO posts (content, user_id) VALUES ('Its a beautiful life', 1);
